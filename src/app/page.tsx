@@ -2,6 +2,7 @@ import { AnimateOnScroll } from '@/components/animate-on-scroll'
 import { Navbar } from '@/components/marketing/navbar'
 import { Hero } from '@/components/marketing/hero'
 import { ProblemSection } from '@/components/marketing/problem-section'
+import { ProductDemo } from '@/components/marketing/product-demo'
 import { HowItWorks } from '@/components/marketing/how-it-works'
 import { FeaturesGrid } from '@/components/marketing/features-grid'
 import { Integrations } from '@/components/marketing/integrations'
@@ -26,6 +27,10 @@ export default function Home() {
 
       <AnimateOnScroll>
         <ProblemSection />
+      </AnimateOnScroll>
+
+      <AnimateOnScroll>
+        <ProductDemo />
       </AnimateOnScroll>
 
       <AnimateOnScroll>
