@@ -57,7 +57,7 @@ export const pricingTiers = [
 
 export function PricingSection() {
   return (
-    <section className="px-6 py-24">
+    <section id="pricing" className="px-6 py-28">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
           <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -72,15 +72,20 @@ export function PricingSection() {
             <div
               key={tier.name}
               className={cn(
-                'backdrop-blur-md bg-white/5 border rounded-xl p-8 relative transition-transform',
+                'relative backdrop-blur-md bg-white/5 border rounded-xl p-8 transition-transform',
                 tier.popular
                   ? 'border-violet-500 scale-105'
                   : 'border-white/10',
                 'hover:scale-105'
               )}
             >
+              {/* Glow behind popular card */}
               {tier.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-violet-600 text-white text-xs font-semibold rounded-full">
+                <div className="absolute inset-0 rounded-xl -z-10 bg-violet-600/10 blur-xl scale-110 pointer-events-none" />
+              )}
+
+              {tier.popular && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-violet-600 text-white text-xs font-semibold rounded-full shadow-lg shadow-violet-500/30">
                   Most Popular
                 </div>
               )}
@@ -105,7 +110,7 @@ export function PricingSection() {
                 className={cn(
                   'inline-flex w-full h-11 items-center justify-center rounded-lg text-sm font-medium transition-colors',
                   tier.popular
-                    ? 'bg-violet-600 text-white hover:bg-violet-700'
+                    ? 'bg-violet-600 text-white hover:bg-violet-700 shadow-lg shadow-violet-500/20'
                     : 'border border-white/20 text-white hover:bg-white/5'
                 )}
               >

@@ -6,6 +6,7 @@ import { Check, ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { pricingTiers } from '@/components/marketing/pricing-section'
 import { Footer } from '@/components/marketing/footer'
+import { Navbar } from '@/components/marketing/navbar'
 import { AnimateOnScroll } from '@/components/animate-on-scroll'
 
 const comparisonFeatures = [
@@ -103,21 +104,11 @@ export default function PricingPage() {
         background: 'radial-gradient(ellipse at top, #1a1035 0%, #0a0118 70%)',
       }}
     >
-      {/* Header */}
-      <div className="px-6 pt-12 pb-4">
-        <div className="max-w-6xl mx-auto">
-          <Link
-            href="/"
-            className="text-sm text-zinc-400 hover:text-white transition-colors"
-          >
-            &larr; Back to Home
-          </Link>
-        </div>
-      </div>
+      <Navbar />
 
       {/* Pricing Tiers */}
       <AnimateOnScroll>
-        <section className="px-6 py-16">
+        <section className="px-6 pt-32 pb-16">
           <div className="max-w-6xl mx-auto">
             <h1 className="text-4xl sm:text-5xl font-bold text-center mb-4">
               <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">

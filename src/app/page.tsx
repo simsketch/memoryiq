@@ -1,4 +1,5 @@
 import { AnimateOnScroll } from '@/components/animate-on-scroll'
+import { Navbar } from '@/components/marketing/navbar'
 import { Hero } from '@/components/marketing/hero'
 import { ProblemSection } from '@/components/marketing/problem-section'
 import { HowItWorks } from '@/components/marketing/how-it-works'
@@ -17,6 +18,8 @@ export default function Home() {
         background: 'radial-gradient(ellipse at top, #1a1035 0%, #0a0118 70%)',
       }}
     >
+      <Navbar />
+
       <AnimateOnScroll>
         <Hero />
       </AnimateOnScroll>

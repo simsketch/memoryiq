@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Footer } from '@/components/marketing/footer'
+import { Navbar } from '@/components/marketing/navbar'
 
 export default function TermsPage() {
   return (
@@ -9,18 +10,9 @@ export default function TermsPage() {
         background: 'radial-gradient(ellipse at top, #1a1035 0%, #0a0118 70%)',
       }}
     >
-      <div className="px-6 pt-12 pb-4">
-        <div className="max-w-3xl mx-auto">
-          <Link
-            href="/"
-            className="text-sm text-zinc-400 hover:text-white transition-colors"
-          >
-            &larr; Back to Home
-          </Link>
-        </div>
-      </div>
+      <Navbar />
 
-      <article className="px-6 py-16">
+      <article className="px-6 pt-32 pb-16">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl font-bold mb-2">
             <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">

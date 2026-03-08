@@ -5,25 +5,30 @@ const problems = [
     icon: Brain,
     title: 'Every conversation starts from zero',
     description:
-      'Your AI forgets everything the moment you close the chat. No continuity, no context.',
+      'Your AI forgets everything the moment you close the chat. No continuity, no context — you repeat yourself endlessly.',
   },
   {
     icon: Lock,
     title: 'Memories locked in silos',
     description:
-      'Knowledge trapped in individual tools with no way to share across your AI ecosystem.',
+      'Knowledge trapped in individual tools with no way to share across your AI ecosystem. Every tool is an island.',
   },
   {
     icon: Users,
     title: 'Team knowledge scattered everywhere',
     description:
-      'Critical information lives in different heads and different tools, impossible to find.',
+      'Critical information lives in different heads and different tools, impossible to find when you need it most.',
   },
 ]
 
 export function ProblemSection() {
   return (
-    <section className="px-6 py-24">
+    <section className="px-6 py-28">
+      {/* Gradient divider */}
+      <div className="max-w-6xl mx-auto mb-20">
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-violet-500/30 to-transparent" />
+      </div>
+
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
           <span className="text-white">Your AI Has </span>
@@ -35,10 +40,10 @@ export function ProblemSection() {
           {problems.map((problem) => (
             <div
               key={problem.title}
-              className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-8 text-center"
+              className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-10 text-center transition-all duration-300 hover:bg-white/[0.08] hover:border-violet-500/20 hover:shadow-xl hover:shadow-violet-500/10"
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-violet-500/10 mb-6">
-                <problem.icon className="w-7 h-7 text-violet-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-violet-500/10 mb-6 border border-violet-500/10">
+                <problem.icon className="w-8 h-8 text-violet-400" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-3">
                 {problem.title}
